@@ -1,0 +1,1 @@
+Qui vanno favicon e loghi (SVG o PNG).

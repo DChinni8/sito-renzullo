@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contatti · Avv. Barbara Renzullo</title>
+<meta name="description" content="Recapiti dello Studio Legale Avv. Barbara Renzullo, Via del Cane 5, Bologna. Si riceve su appuntamento.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#contenuto">Vai al contenuto</a>
+<header class="header">
+  <div class="wrap">
+    <a class="marchio" href="index.html"><b>Barbara Renzullo</b><span>Avvocato penalista · Bologna</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Principale">
+      <a href="index.html">Home</a>
+      <a href="profilo.html">Profilo</a>
+      <a href="contatti.html" aria-current="page">Contatti</a>
+      <a class="tel" href="tel:+393388418104">+39 338 841 8104</a>
+    </nav>
+  </div>
+</header>
+<main id="contenuto">
+
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="etichetta"><span class="n">Contatti</span><span>Si riceve su appuntamento</span></div>
+    <h1 style="max-width:9em">Come <em>contattare</em> lo studio.</h1>
+    <p class="lead">Per una consulenza o per assistenza in un procedimento penale, può telefonare, scrivere o compilare il modulo qui sotto. Sarà ricontattato per fissare un appuntamento presso lo studio.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap contatti-griglia">
+    <div>
+      <dl class="voci">
+        <div><dt>Studio</dt><dd>Via del Cane 5<br>40124 Bologna (BO)</dd></div>
+        <div><dt>Telefono</dt><dd><a href="tel:+393388418104">+39 338 841 8104</a><small>Per questioni urgenti è preferibile il contatto telefonico.</small></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:avv.barbararenzullo@gmail.com">avv.barbararenzullo@gmail.com</a></dd></div>
+        <div><dt>PEC</dt><dd><a href="mailto:barbara.renzullo@pec.it">barbara.renzullo@pec.it</a><small>Per comunicazioni con valore legale.</small></dd></div>
+        <div><dt>Orari</dt><dd>
+          <table class="orari">
+            <tr><td>Lunedì – Venerdì</td><td>9:00 – 18:30</td></tr>
+            <tr><td>Sabato e domenica</td><td>Chiuso</td></tr>
+          </table>
+          <small>Si riceve solo su appuntamento.</small></dd></div>
+      </dl>
+      <a class="mappa" href="https://www.google.com/maps/search/?api=1&query=Via+del+Cane+5,+40124+Bologna" target="_blank" rel="noopener" aria-label="Apri la posizione dello studio in Google Maps">
+        <span class="pin"><span>Via del Cane 5</span></span>
+        <span class="apri">Apri in Google Maps ↗</span>
+      </a>
+    </div>
+
+    <form class="modulo" id="modulo-contatti" novalidate>
+      <h2>Richiesta di contatto</h2>
+      <p class="tenue">I dati inviati sono trattati con la massima riservatezza.</p>
+      <div class="due">
+        <div class="campo"><label for="nome">Nome e cognome</label><input id="nome" name="nome" autocomplete="name" required></div>
+        <div class="campo"><label for="telefono">Telefono <span class="facolt">(facoltativo)</span></label><input id="telefono" name="telefono" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="campo"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+      <div class="campo"><label for="ambito">Ambito della richiesta</label>
+        <select id="ambito" name="ambito" required>
+          <option value="" selected disabled>Selezioni un ambito</option>
+          <option>Diritto penale</option>
+          <option>Diritto penale minorile</option>
+          <option>Procedura penale</option>
+          <option>Costituzione di parte civile</option>
+          <option>Difesa d'ufficio / patrocinio a spese dello Stato</option>
+          <option>Altro</option>
+        </select>
+      </div>
+      <div class="campo"><label for="messaggio">Messaggio</label><textarea id="messaggio" name="messaggio" required></textarea></div>
+      <p class="avviso">Basta una breve descrizione: i dettagli del caso saranno approfonditi durante il colloquio in studio.</p>
+      <label class="consenso"><input type="checkbox" name="privacy" required><span>Ho letto l'<a href="privacy.html">informativa privacy</a> e acconsento al trattamento dei dati per essere ricontattato.</span></label>
+      <button class="btn" type="submit">Invia la richiesta <span class="freccia" aria-hidden="true">→</span></button>
+      <p class="esito" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<section class="scura">
+  <div class="wrap">
+    <p class="citazione" style="border-color:var(--giallo);max-width:30em">Ogni colloquio è tutelato dal segreto professionale, fin dal primo contatto.</p>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="alto">
+      <div>
+        <div class="nome">Studio Legale<br>Avv. Barbara Renzullo</div>
+        <p>Diritto penale, penale minorile e procedura penale.<br>Patrocinante in Cassazione e avanti le Magistrature Superiori.</p>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <ul>
+          <li>Via del Cane 5, 40124 Bologna</li>
+          <li><a href="tel:+393388418104">+39 338 841 8104</a></li>
+          <li><a href="mailto:avv.barbararenzullo@gmail.com">avv.barbararenzullo@gmail.com</a></li>
+          <li>PEC: <a href="mailto:barbara.renzullo@pec.it">barbara.renzullo@pec.it</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Pagine</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profilo.html">Profilo</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="basso">
+      <span>Iscritta all'Ordine degli Avvocati di Bologna · P.IVA 03310461208</span>
+      <span>© 2026 Avv. Barbara Renzullo</span>
+    </div>
+  </div>
+</footer>
+<nav class="barra-mobile" aria-label="Contatto rapido">
+  <a class="chiama" href="tel:+393388418104">Chiama</a>
+  <a class="scrivi" href="contatti.html#modulo-contatti">Scrivi</a>
+</nav>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
