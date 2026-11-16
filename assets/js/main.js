@@ -27,8 +27,8 @@ if (modulo) {
       d.get("messaggio"),
     ].join("\n");
     window.location.href =
-      `mailto:avv.barbararenzullo@gmail.com?subject=${encodeURIComponent(oggetto)}&body=${encodeURIComponent(corpo)}`;
+      `mailto:avv.renzullo3@gmail.com?subject=${encodeURIComponent(oggetto)}&body=${encodeURIComponent(corpo)}`;
     modulo.querySelector(".esito").textContent =
-      "Si è aperto il suo programma di posta con il messaggio già compilato. Se non si apre, scriva direttamente a avv.barbararenzullo@gmail.com.";
+      "Si è aperto il suo programma di posta con il messaggio già compilato. Se non si apre, scriva direttamente a avv.renzullo3@gmail.com.";
   });
 }
