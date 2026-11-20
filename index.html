@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=7">
+<link rel="stylesheet" href="assets/css/style.css?v=12">
 </head>
 <body class="home con-barra">
 <a class="skip" href="#contenuto">Vai al&nbsp;contenuto</a>
@@ -21,6 +21,11 @@
       <a href="index.html" aria-current="page">Home</a>
       <a href="profilo.html">Profilo</a>
       <a href="contatti.html">Contatti</a>
+      <div class="nav-extra">
+        <a href="tel:+393388418104">+39 338 841&nbsp;8104</a>
+        <a href="mailto:avv.renzullo3@gmail.com">avv.renzullo3@gmail.com</a>
+        <span>Via&nbsp;Garibaldi 7,&nbsp;Bologna</span>
+      </div>
     </nav>
   </div>
 </header>
@@ -33,13 +38,21 @@
         <div class="meta-riga"><span>Studio legale&nbsp;penale</span><span>Foro di&nbsp;Bologna</span></div>
         <h1 class="nome"><span>Barbara</span><span class="rientro">Renzullo</span></h1>
         <p class="claim">Difesa penale con <em>competenza</em> e&nbsp;attenzione alla&nbsp;persona.</p>
-        <p class="lead">Consulenza e&nbsp;difesa nel&nbsp;diritto penale, nel&nbsp;penale minorile e&nbsp;nella procedura penale, in&nbsp;ogni fase e&nbsp;grado del&nbsp;procedimento, su&nbsp;tutto il&nbsp;territorio&nbsp;nazionale.</p>
-        <a class="btn" href="contatti.html">Richiedi un&nbsp;appuntamento <span class="freccia" aria-hidden="true">→</span></a>
+        <p class="lead">Diritto penale, penale minorile e&nbsp;procedura penale, in&nbsp;ogni fase e&nbsp;grado del&nbsp;procedimento, su&nbsp;tutto il&nbsp;territorio&nbsp;nazionale.</p>
+        <a class="btn btn-tel" href="tel:+393388418104"><svg class="icona-tel" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Per&nbsp;un&nbsp;appuntamento: +39 338 841&nbsp;8104</a>
       </div>
       <figure class="ritratto hero-ritratto">
         <!-- Quando c'è la foto: sostituire il blocco "ritratto-attesa" qui sotto con
              <img src="assets/img/foto/ritratto-barbara.webp" alt="Avv. Barbara Renzullo" width="1000" height="1250" fetchpriority="high"> -->
         <div class="ritratto-attesa" aria-hidden="true"><span>B</span><span>R</span></div>
+        <svg class="sigillo" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+          <defs><path id="giro" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <circle class="sg-fondo" cx="100" cy="100" r="98"/>
+          <circle class="sg-linea" cx="100" cy="100" r="93"/>
+          <circle class="sg-linea" cx="100" cy="100" r="62"/>
+          <g class="sg-giro"><text><textPath href="#giro" textLength="488" lengthAdjust="spacing">AVV. BARBARA RENZULLO · FORO DI&nbsp;BOLOGNA · DAL&nbsp;1997 ·</textPath></text></g>
+          <text class="sg-mono" x="100" y="117" text-anchor="middle">B<tspan>R</tspan></text>
+        </svg>
       </figure>
     </div>
   </div>
@@ -49,12 +62,13 @@
         <li><b>1997</b>Inizio&nbsp;dell'attività</li>
         <li><b>1999</b>Albo degli Avvocati di&nbsp;Bologna</li>
         <li><b>2013</b>Patrocinante in&nbsp;Cassazione</li>
+        <li class="scorri-li"><a class="scorri" href="#aree">Scorri <span class="scorri-linea" aria-hidden="true"></span></a></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section>
+<section id="aree">
   <div class="wrap">
     <div class="g12 sez-testa">
       <p class="etichetta c-eti"><span class="n">I</span><span>Aree di&nbsp;attività</span></p>
@@ -80,29 +94,29 @@
       <h2 class="c-titolo">Tra&nbsp;la&nbsp;Corte&nbsp;d'Appello e&nbsp;il <em>Tribunale&nbsp;penale</em>.</h2>
     </div>
     <figure class="g12 tavola-larga">
-      <img class="c-cont" src="assets/img/tavole/ranuzzi-1760.webp" srcset="assets/img/tavole/ranuzzi-1760-800.webp 800w, assets/img/tavole/ranuzzi-1760.webp 1200w" sizes="(max-width: 900px) 100vw, 68vw" width="1200" height="558" alt="Facciata di Palazzo Ranuzzi in un'incisione del 1760" loading="lazy">
+      <picture class="c-cont"><source media="(max-width: 900px)" srcset="assets/img/tavole/ranuzzi-1760-800.webp"><img src="assets/img/tavole/ranuzzi-1760.webp" width="1200" height="558" alt="Facciata di Palazzo Ranuzzi in un'incisione del 1760" loading="lazy"></picture>
       <figcaption class="c-eti"><span>Tav.&nbsp;I</span>La&nbsp;facciata di&nbsp;Palazzo&nbsp;Ranuzzi, oggi Corte&nbsp;d'Appello in&nbsp;piazza dei&nbsp;Tribunali, incisa da&nbsp;Francesco Barbazza su&nbsp;disegno di&nbsp;Luigi Balugani (1760).<small>Pubblico dominio, <a href="https://commons.wikimedia.org/wiki/File:Piante,_facciata,_e_spaccati_del_Palazzo_Senatorio_Ranuzzi_in_Bologna_(IA_gri_33125010904395).pdf" target="_blank" rel="noopener">via&nbsp;Wikimedia&nbsp;Commons</a></small></figcaption>
     </figure>
     <div class="g12">
       <div class="studio-testo">
         <p class="lead">Lo&nbsp;studio è&nbsp;in&nbsp;Via&nbsp;Garibaldi 7, tra&nbsp;piazza&nbsp;San&nbsp;Domenico e&nbsp;piazza dei&nbsp;Tribunali. La&nbsp;Corte&nbsp;d'Appello in&nbsp;Palazzo&nbsp;Baciocchi e&nbsp;il&nbsp;Tribunale penale nell'ex monastero di&nbsp;San&nbsp;Procolo sono a&nbsp;pochi minuti&nbsp;a&nbsp;piedi.</p>
         <p>Si riceve su&nbsp;appuntamento, per&nbsp;dedicare a&nbsp;ciascun caso il&nbsp;tempo e&nbsp;la&nbsp;riservatezza che&nbsp;richiede.</p>
-        <p><a class="link-freccia" href="contatti.html">Orari, email e&nbsp;modulo di&nbsp;contatto&nbsp;→</a></p>
+        <p><a class="link-freccia" href="contatti.html">Orari e&nbsp;recapiti&nbsp;→</a></p>
       </div>
       <dl class="voci studio-voci">
         <div><dt>Indirizzo</dt><dd>Via&nbsp;Garibaldi 7, 40124 Bologna<small><a href="https://maps.app.goo.gl/C2XstMDT9rUsqEiU8" target="_blank" rel="noopener">Apri in&nbsp;Google Maps&nbsp;↗</a></small></dd></div>
         <div><dt>Telefono</dt><dd><a href="tel:+393388418104">+39 338 841&nbsp;8104</a></dd></div>
       </dl>
     </div>
-    <div class="g12 uffici-riga">
-      <p class="etichetta c-eti etichetta-voci">Uffici giudiziari di&nbsp;Bologna</p>
-      <dl class="uffici c-cont">
+    <details class="uffici-riga" open>
+      <summary class="etichetta etichetta-voci">Uffici giudiziari di&nbsp;Bologna</summary>
+      <dl class="uffici">
         <div><dt>Corte&nbsp;d'Appello e&nbsp;Procura generale</dt><dd>Palazzo&nbsp;Baciocchi<small>Piazza dei&nbsp;Tribunali&nbsp;4</small></dd></div>
         <div><dt>Tribunale penale</dt><dd>Ex monastero di&nbsp;San&nbsp;Procolo<small>Via&nbsp;D'Azeglio 56 · dibattimento, GIP e&nbsp;GUP, Riesame, Corte&nbsp;d'Assise</small></dd></div>
         <div><dt>Tribunale civile e&nbsp;Tribunale di&nbsp;sorveglianza</dt><dd>Palazzo&nbsp;Legnani-Pizzardi<small>Via&nbsp;Farini&nbsp;1</small></dd></div>
         <div><dt>Tribunale per&nbsp;i&nbsp;minorenni</dt><dd>Aule penali<small>Via del&nbsp;Pratello&nbsp;36</small></dd></div>
       </dl>
-    </div>
+    </details>
   </div>
 </section>
 </main>
@@ -112,10 +126,10 @@
     <nav aria-label="Secondaria"><a href="privacy.html">Privacy</a><span>©&nbsp;2026</span></nav>
   </div>
 </footer>
-<nav class="barra-mobile" aria-label="Contatto rapido">
-  <a class="chiama" href="tel:+393388418104">Chiama</a>
-  <a class="scrivi" href="contatti.html#modulo-contatti">Scrivi</a>
+<nav class="barra-mobile" aria-label="Azioni rapide">
+  <button class="barra-menu" type="button" aria-expanded="false" aria-controls="nav"><span class="hamb" aria-hidden="true"><i></i><i></i></span><span class="vh">Menu</span></button>
+  <a class="prenota" href="tel:+393388418104"><svg class="icona-tel" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Chiama per&nbsp;un&nbsp;appuntamento</a>
 </nav>
-<script src="assets/js/main.js?v=7"></script>
+<script src="assets/js/main.js?v=12"></script>
 </body>
 </html>

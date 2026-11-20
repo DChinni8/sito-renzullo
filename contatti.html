@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contatti · Avv. Barbara Renzullo</title>
-<meta name="description" content="Recapiti dello Studio Legale Avv. Barbara Renzullo, Via Garibaldi 7, Bologna. Si riceve su appuntamento.">
+<meta name="description" content="Recapiti dello Studio Legale Avv. Barbara Renzullo, Via Garibaldi 7, Bologna. Si riceve su appuntamento, da fissare per telefono.">
 <meta name="theme-color" content="#13253f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=7">
+<link rel="stylesheet" href="assets/css/style.css?v=12">
 </head>
-<body class="">
+<body class="con-barra">
 <a class="skip" href="#contenuto">Vai al&nbsp;contenuto</a>
 <header class="header">
   <div class="wrap">
@@ -21,6 +21,11 @@
       <a href="index.html">Home</a>
       <a href="profilo.html">Profilo</a>
       <a href="contatti.html" aria-current="page">Contatti</a>
+      <div class="nav-extra">
+        <a href="tel:+393388418104">+39 338 841&nbsp;8104</a>
+        <a href="mailto:avv.renzullo3@gmail.com">avv.renzullo3@gmail.com</a>
+        <span>Via&nbsp;Garibaldi 7,&nbsp;Bologna</span>
+      </div>
     </nav>
   </div>
 </header>
@@ -32,7 +37,7 @@
       <p class="etichetta c-eti"><span class="n">Contatti</span><span>Si riceve su&nbsp;appuntamento</span></p>
       <div class="c-titolo">
         <h1>Come contattare <em>lo&nbsp;studio</em></h1>
-        <p class="lead">Per&nbsp;una&nbsp;consulenza o&nbsp;per&nbsp;assistenza in&nbsp;un&nbsp;procedimento penale si riceve su&nbsp;appuntamento, da&nbsp;prendere telefonando, scrivendo o&nbsp;compilando il&nbsp;modulo.</p>
+        <p class="lead">Gli&nbsp;appuntamenti si fissano per&nbsp;telefono: parlarne a&nbsp;voce chiarisce subito ogni dubbio ed&nbsp;è&nbsp;il&nbsp;primo passo di&nbsp;un&nbsp;rapporto di&nbsp;fiducia.</p>
       </div>
     </div>
   </div>
@@ -47,7 +52,6 @@
       </figure>
       <dl class="voci contatti-voci">
         <div><dt>Studio</dt><dd>Via&nbsp;Garibaldi 7, 40124 Bologna<small>Tra&nbsp;piazza&nbsp;San&nbsp;Domenico e&nbsp;piazza dei&nbsp;Tribunali</small><small><a href="https://maps.app.goo.gl/C2XstMDT9rUsqEiU8" target="_blank" rel="noopener">Apri in&nbsp;Google Maps&nbsp;↗</a></small></dd></div>
-        <div><dt>Telefono</dt><dd><a href="tel:+393388418104">+39 338 841&nbsp;8104</a><small>Per&nbsp;questioni urgenti è&nbsp;preferibile&nbsp;telefonare.</small></dd></div>
         <div><dt>Email</dt><dd><a href="mailto:avv.renzullo3@gmail.com">avv.renzullo3@gmail.com</a></dd></div>
         <div><dt>PEC</dt><dd><a href="mailto:barbara.renzullo@pec.it">barbara.renzullo@pec.it</a><small>Per&nbsp;comunicazioni con&nbsp;valore&nbsp;legale.</small></dd></div>
         <div><dt>Orari</dt><dd>
@@ -57,33 +61,12 @@
           </table></dd></div>
       </dl>
 
-      <form class="modulo" id="modulo-contatti" novalidate>
-        <h2>Richiesta di&nbsp;appuntamento</h2>
-        <p class="tenue">Basta una&nbsp;breve descrizione: i&nbsp;dettagli del&nbsp;caso saranno approfonditi durante il&nbsp;colloquio, tutelato dal&nbsp;segreto&nbsp;professionale.</p>
-        <div class="campi">
-          <div class="campo intera"><label for="nome">Nome&nbsp;e&nbsp;cognome</label><input id="nome" name="nome" autocomplete="name" required></div>
-          <div class="campo"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-          <div class="campo"><label for="telefono">Telefono <span class="facolt">(facoltativo)</span></label><input id="telefono" name="telefono" type="tel" autocomplete="tel"></div>
-          <div class="campo intera"><label for="ambito">Ambito</label>
-            <select id="ambito" name="ambito" required>
-              <option value="" selected disabled>Selezioni un&nbsp;ambito</option>
-              <option>Processi penali</option>
-              <option>Diritto penale minorile</option>
-              <option>Procedura penale</option>
-              <option>Costituzione di&nbsp;parte civile</option>
-              <option>Difesa d'ufficio</option>
-              <option>Patrocinio a&nbsp;spese dello Stato</option>
-              <option>Altro</option>
-            </select>
-          </div>
-          <div class="campo intera"><label for="messaggio">Messaggio</label><textarea id="messaggio" name="messaggio" required></textarea></div>
-        </div>
-        <label class="consenso"><input type="checkbox" name="privacy" required><span>Ho letto l'<a href="privacy.html">informativa&nbsp;privacy</a> e&nbsp;acconsento al&nbsp;trattamento dei&nbsp;dati per&nbsp;la&nbsp;gestione della&nbsp;richiesta.</span></label>
-        <div class="modulo-fondo">
-          <button class="btn" type="submit">Invia la&nbsp;richiesta <span class="freccia" aria-hidden="true">→</span></button>
-        </div>
-        <p class="esito" role="status" aria-live="polite"></p>
-      </form>
+      <div class="modulo chiamata" id="appuntamento">
+        <h2>Per&nbsp;un&nbsp;appuntamento</h2>
+        <a class="numero" href="tel:+393388418104">+39 338 841&nbsp;8104</a>
+        <p class="tenue">Se l'avvocata è&nbsp;impegnata, un&nbsp;messaggio la&nbsp;inviterà a&nbsp;richiamare più&nbsp;tardi.</p>
+        <a class="btn btn-tel" href="tel:+393388418104"><svg class="icona-tel" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Chiama&nbsp;lo&nbsp;studio</a>
+      </div>
     </div>
   </div>
 </section>
@@ -94,6 +77,10 @@
     <nav aria-label="Secondaria"><a href="privacy.html">Privacy</a><span>©&nbsp;2026</span></nav>
   </div>
 </footer>
-<script src="assets/js/main.js?v=7"></script>
+<nav class="barra-mobile" aria-label="Azioni rapide">
+  <button class="barra-menu" type="button" aria-expanded="false" aria-controls="nav"><span class="hamb" aria-hidden="true"><i></i><i></i></span><span class="vh">Menu</span></button>
+  <a class="prenota" href="tel:+393388418104"><svg class="icona-tel" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Chiama per&nbsp;un&nbsp;appuntamento</a>
+</nav>
+<script src="assets/js/main.js?v=12"></script>
 </body>
 </html>
