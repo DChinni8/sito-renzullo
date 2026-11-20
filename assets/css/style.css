@@ -776,3 +776,10 @@ section { padding: clamp(56px, 7vw, 104px) 0; }
   0%, 82%, 100% { transform: none; }
   85% { transform: rotate(-14deg); } 88% { transform: rotate(12deg); } 91% { transform: rotate(-10deg); } 94% { transform: rotate(6deg); }
 }
+
+/* v12 · testata delle pagine interne più compatta su desktop: il contenuto (es. "Chiama") entra nella prima schermata */
+@media (min-width: 901px) {
+  .intro { padding: clamp(44px, 4.4vw, 72px) 0 clamp(32px, 3vw, 48px); }
+  .intro .lead { margin-top: 20px; }
+  .intro + section { padding-top: clamp(36px, 3.2vw, 52px); }
+}

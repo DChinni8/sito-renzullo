@@ -1,0 +1,30 @@
+# Temporaneo: aggiorna "Quasi trent'anni" in profilo.html alle date scritte lì.
+# Dopo l'ultima data ripulisce il codice e si disattiva da solo.
+name: Frase anni di attività
+on:
+  schedule:
+    - cron: "17 4 * * *"   # ogni giorno, verso le 5-6 ora italiana
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  actions: write
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: if [ -f .github/scripts/anni.py ]; then python3 .github/scripts/anni.py; fi
+      - name: Pubblica
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          finito=false; [ -f .github/anni-finito ] && finito=true && rm .github/anni-finito
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A && git commit -m "Frase degli anni di attività aggiornata automaticamente"
+            git push
+            gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
+          fi
+          if $finito; then gh workflow disable "${{ github.workflow }}" -R "${{ github.repository }}"; fi

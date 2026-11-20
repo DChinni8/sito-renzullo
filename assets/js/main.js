@@ -132,3 +132,14 @@ if (telefono.matches) {
     }));
   }
 }
+/* anni:inizio · blocco temporaneo: aggiorna la frase degli anni se il sito non è ancora stato aggiornato da GitHub. Lo cancella .github/scripts/anni.py dopo l'ultima data. */
+(function () {
+  var el = document.querySelector(".anni[data-tappe]");
+  if (!el) return;
+  var d = new Date(), oggi = d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2);
+  el.getAttribute("data-tappe").split("|").forEach(function (t) {
+    var data = t.slice(0, 10);
+    if (/^\d{4}-\d\d-\d\d$/.test(data) && data <= oggi) el.textContent = t.slice(11);
+  });
+})();
+/* anni:fine */
