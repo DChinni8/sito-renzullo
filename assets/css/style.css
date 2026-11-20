@@ -706,11 +706,10 @@ section { padding: clamp(56px, 7vw, 104px) 0; }
 }
 
 /* ---------- Incisione dal vivo (desktop) ----------
-   Come lavora un incisore, partendo dall'angolo in alto a sinistra:
+   Come lavora un incisore, partendo dall'angolo in alto a sinistra, in due passate lente:
    1. il disegno preparatorio a tratto sottile (contorni);
-   2. il primo tratteggio leggero, in una sola direzione;
-   3. il tratteggio incrociato che scurisce le ombre, fino all'inchiostro pieno.
-   Circa 12 secondi. Il contorno compare subito, così la tavola non è mai vuota. */
+   2. il tratteggio incrociato, già carico, che si infittisce fino all'inchiostro pieno.
+   Circa 8 secondi. Il contorno compare subito, così la tavola non è mai vuota. */
 @property --ca { syntax: "<percentage>"; inherits: false; initial-value: 0%; }
 @property --cb { syntax: "<percentage>"; inherits: false; initial-value: 0%; }
 @property --cc { syntax: "<percentage>"; inherits: false; initial-value: 0%; }
@@ -740,15 +739,14 @@ section { padding: clamp(56px, 7vw, 104px) 0; }
     mask-image: linear-gradient(135deg, #000 calc(var(--cc) - 18%), transparent var(--cc)), repeating-linear-gradient(-45deg, #000 0 var(--t2), transparent var(--t2) 3px), repeating-linear-gradient(45deg, #000 0 var(--t2), transparent var(--t2) 3px);
     mask-composite: intersect, add;
   }
-  .stampata .l-contorno { animation: disegno 4.2s cubic-bezier(.4, .1, .3, 1) forwards; }
-  .stampata .l-tono { animation: tratteggio 6s 1.4s cubic-bezier(.4, .1, .3, 1) forwards; }
-  .stampata .l-inchiostro { animation: inchiostro 7s 4.8s cubic-bezier(.4, .1, .3, 1) forwards; }
+  .stampata .l-contorno { animation: disegno 3.6s cubic-bezier(.25, .2, .35, 1) forwards; }
+  .stampata .l-inchiostro { animation: inchiostro 5.4s 2.4s cubic-bezier(.45, .05, .3, 1) forwards; }
   .incisa .l-inchiostro { -webkit-mask-image: none; mask-image: none; }
   .incisa .strato { visibility: hidden; }
 }
 @keyframes disegno { to { --ca: 118%; } }
 @keyframes tratteggio { 0% { --cb: 0%; --t1: .5px; } 70% { --cb: 120%; --t1: 1.1px; } 100% { --cb: 120%; --t1: 1.6px; } }
-@keyframes inchiostro { 0% { --cc: 0%; --t2: .4px; } 55% { --cc: 122%; --t2: .9px; } 100% { --cc: 122%; --t2: 3px; } }
+@keyframes inchiostro { 0% { --cc: 0%; --t2: .9px; } 60% { --cc: 122%; --t2: 1.5px; } 100% { --cc: 122%; --t2: 3px; } }
 
 /* ---------- Appuntamenti solo per telefono ---------- */
 .icona-tel { width: 18px; height: 18px; fill: currentColor; flex: none; }
@@ -783,3 +781,20 @@ section { padding: clamp(56px, 7vw, 104px) 0; }
   .intro .lead { margin-top: 20px; }
   .intro + section { padding-top: clamp(36px, 3.2vw, 52px); }
 }
+
+/* ---------- Sicurezza su rete scarsa ----------
+   .leggero la mette lo script in testa alla pagina con "risparmio dati", rete 2G
+   o se dopo 4 secondi la pagina non ha finito di caricare: via animazioni, sfocature
+   e comparse; tutto resta visibile e usabile, il telefono si chiama comunque. */
+.leggero *, .leggero *::before, .leggero *::after { animation: none !important; transition: none !important; }
+.leggero .rivela { opacity: 1 !important; transform: none !important; }
+@media (max-width: 900px) {
+  .leggero body .barra-mobile.barra-mobile::before { display: none; }
+  .leggero body .barra-mobile.barra-mobile::after { background: var(--blu-notte); }
+  /* Senza JavaScript il menu si apre comunque: il tasto porta a #nav */
+  .nav:target { clip-path: none; visibility: visible; }
+  .home .header:has(.nav:target) { transform: none; }
+  .nav:target > a, .nav:target .nav-extra { opacity: 1; transform: none; }
+}
+.leggero .incisione .strato { display: none; }
+.leggero .incisione .l-inchiostro { -webkit-mask-image: none !important; mask-image: none !important; }

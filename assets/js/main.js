@@ -36,7 +36,7 @@ if (modulo) {
 // Tavole incise: su schermi grandi si "incidono" dal vivo quando si avvicinano.
 // Su telefono e con "riduci movimento" restano ferme e non si scarica nulla in più.
 const animare = window.matchMedia("(min-width: 901px) and (prefers-reduced-motion: no-preference)").matches;
-if (animare && "IntersectionObserver" in window && CSS.supports("mask-composite", "intersect")) {
+if (animare && !document.documentElement.classList.contains("leggero") && "IntersectionObserver" in window && CSS.supports("mask-composite", "intersect")) {
   const prepara = (fig) => {
     const img = fig.querySelector("img");
     const nome = (img.getAttribute("src") || "").replace(/(-800)?\.(webp|png)$/, "-contorno.webp");
@@ -45,10 +45,9 @@ if (animare && "IntersectionObserver" in window && CSS.supports("mask-composite"
     img.parentNode.insertBefore(box, img);
     const contorno = document.createElement("img");
     contorno.src = nome; contorno.alt = ""; contorno.className = "strato l-contorno";
-    const tono = img.cloneNode(); tono.removeAttribute("srcset"); tono.alt = ""; tono.className = "strato l-tono";
     img.loading = "eager";
     img.classList.add("l-inchiostro");
-    box.append(contorno, tono, img);
+    box.append(contorno, img);
     return { img, contorno };
   };
   const avvia = (fig) => {
@@ -86,7 +85,8 @@ if (telefono.matches) {
     bm.setAttribute("aria-expanded", "false");
   };
   if (bm && menu) {
-    bm.addEventListener("click", () => {
+    bm.addEventListener("click", (e) => {
+      e.preventDefault();
       const aperto = menu.classList.toggle("aperto");
       document.body.classList.toggle("menu-aperto", aperto);
       bm.setAttribute("aria-expanded", aperto);
@@ -118,7 +118,7 @@ if (telefono.matches) {
   });
 
   // Comparsa dolce degli elementi quando entrano nello schermo
-  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  if ("IntersectionObserver" in window && !document.documentElement.classList.contains("leggero") && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     const gruppi = [".sez-testa > *", ".hero-fatti li", ".indice > li", ".tavola-larga", ".studio-voci > div", ".uffici-riga",
       ".linea-tempo > li", ".incarichi > div", ".materie > div", ".parte-civile", ".voci > div", ".modulo-campi > *", ".intro .lead"];
     const oss = new IntersectionObserver((voci) => {
